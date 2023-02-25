@@ -12,7 +12,7 @@ export class Home extends Component {
     posts: [],
     allPosts: [],
     page: 0,
-    postPerPage: 2,
+    postPerPage: 10,
     searchValue: ''
   };
 
@@ -44,7 +44,7 @@ export class Home extends Component {
     const nextPosts = allPosts.slice(nextPage, nextPage + postPerPage);
     posts.push(...nextPosts);
 
-    this.setState({ page, page: nextPage });
+    this.setState({ posts, page: nextPage });
   }
 
   //atualizando o componente
